@@ -1,0 +1,5 @@
+%h1.page-title-thin.no-margin-top.pull-left= t('user.profile.title')
+%small.pull-right= link_to t('user.profile.back'), user_path(current_user)
+.clearfix
+= render 'users/profile_menu'
+%br
