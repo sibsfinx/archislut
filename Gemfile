@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 # Use unicorn as the app server
 gem 'unicorn'
+
+gem 'rails_12factor'
 
 gem 'rails', '4.0.0'
 #gem 'rails',     github: 'rails/rails'
@@ -204,6 +208,7 @@ group :development do
   gem "mailcatcher", :require => false
   gem 'foreman'
 end
+
 
 #group :test do
 #  gem 'factory_girl_rails'
