@@ -14,10 +14,20 @@ ru:
 
     error_notification:
       default_message: "Обнаружены ошибки, пожалуйста, взгляните на них"
-      blank: "Не может быть пустым"
+      label:
+        default:
+          blank: "Не может быть пустым"
+        organization:
+        person:
+          email:
+            email: Неверный формат email
+        property:
+          key: 
+            conflict_fields: Запрещенное название ключа
+
     confirm: Вы уверены?
     button:
-      disble_with:
+      disable_with:
         sending: Отправляем...
         saving: Сохраняем...
         waiting: Подождите...
@@ -25,9 +35,117 @@ ru:
       defaults:
         name: Название
         title: Название
+        slug: Поддомен
+        site_url: Сайт
+      user: &user_labels
+        username: Имя пользователя
+        email: Email
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        organization_name: Название организации
+        organization_website: Сайт
+      registration_form:
+        <<: *user_labels
+      new_session_form: &new_session_form
+        <<: *user_labels
+        email: Email
+      reset_password_form:
+        <<: *user_labels
+      phones:
+        phone_number: Телефон
+      person: &person_labels
+        first_name: "Имя"
+        last_name: "Фамилия"
+        title: Должность
+        email: E-mail
+        site_url: Сайт
+        country: Страна
+        region: Регион
+        city: Город
+        address: Адрес
+        social_facebook: Facebook
+        social_twitter: Twitter
+        social_vk: ВКонтакте
+        social_gplus: Google+
+        birthday: 'День рождения'
+        logo: Лого
+        avatar: Аватар
+        manager: Ответственный менеджер
+      company: &company_labels
+        <<: *person_labels
+        kind: Тип
+        site: Сайт
+        name: Название
+      task:
+        subject: Тема
+        taskable_ident: Связать с
+        description: Описание
+        due_at: Выполнить к
+        due_at_date: Срок выполнения
+        due_at_time: Время выполнения
+        responsible: Ответственный
+        kind: Тип
+        closed_state: Закрыта
+      property:
+        name: Название
+        key: Ключ
+        kind: Тип
+      segment: &segment_labels
+        rules: Правила
+        name: Название
+        color: Цвет
+        rule:
+        add: Добавить
     placeholders:
       defaults:
+        available_domains: 'domain1.com, domain2.ru'
+        value: Значение
         title: Название
+        slug: mysite
+        path_pattern: /ru/:path
+        username: Полное имя
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        email: email@mycompany.ru
+        org_name: Название организации
+        org_site_url: http://mysite.com/
+        <<: *user_labels
+      property:
+        name: 'Количество заказов'
+        key: 'orders_count'
+      person:
+        title: ''
+        select_company: Выберите компанию
+        responsible_manager: Ответственный менеджер
+        <<: *person_labels
+      company:
+        <<: *company_labels
+      registration_form:
+        <<: *user_labels
+      new_session_form: &new_session_form
+        <<: *user_labels
+        email: Email
+      reset_password_form:
+        <<: *user_labels
+      email_field: Email
+      organization:
+        name: Название
+        site: http://
+      task:
+        subject: Тема
+        taskable: Связать с
+        description: Описание
+        due_at: Выполнить к
+        responsible: Ответственный
+      segment:
+        <<: *segment_labels
+        description: Описание
+      notification_form:
+        subject: Тема
+        content: Сообщение
     hints:
       defaults:
+        available_domains: "Список разрешеных доменов через запятую"
+        query: 'Например: Вася* OR Петя*(<a target="_blank" href="http://lucene.apache.org/core/3_4_0/queryparsersyntax.html#Escaping%20Special%20Characters">подробней)</a>'
         price: руб.
+        path_pattern: '/poducts/:product_id'

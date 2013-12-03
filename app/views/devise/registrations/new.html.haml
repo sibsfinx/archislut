@@ -1,0 +1,12 @@
+.login-block
+  .row
+    .col-sm-4.col-sm-offset-4
+      = simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f|
+        = devise_error_messages!
+        = f.input :email, label: false
+        = f.input :password, label: false
+        = f.input :password_confirmation, label: false
+        = f.submit "Регистрация", class: 'btn btn-lg btn-block btn-primary'
+        %hr
+        = render 'devise/shared/links'
+

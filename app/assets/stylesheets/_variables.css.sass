@@ -1,0 +1,83 @@
+@charset "UTF-8"
+
+$gray: rgb(100,100,100)
+$grayLight: lighten($gray,30%)
+$grayLighter: lighten($gray,40%)
+$grayLightest: lighten($gray,50%)
+$grayLightestBackground: lighten($grayLightest,5%)
+$grayDark: darken($gray,10%)
+$grayDarker: darken($gray,20%)
+$grayDarkest: rgb(20,20,20)
+
+$greenLight: rgba(143,200,0,1)
+$greenDark: rgba(115,160,0,1)
+$greenLightTransparent: rgba(143,200,0,0.75)
+
+$brandColor: hsl(75, 100%, 40%)
+
+$blue: #08c
+$blueDark: #293133
+$blueBrandColor: #1A94C4
+$white: #fff
+$black: #000
+$red: #E65151
+$green: #44ff67
+$orange: #d65014
+$orangeLight: #f35914
+$twitterColor: #44bef7
+
+$bluePaleDark: #505a64
+$purple: rgb(158, 0, 93)
+
+$blueMuted: adjust-hue(saturate(darken($white,50%),30%), 200%)
+
+$textColor: $grayDark
+$textColorDark: $grayDarker
+
+$linkColor: #08c
+$linkColorHover: darken($link-color,10%)
+
+$baseFontSize: $font-size-base
+
+$bodyBackground: darken(#fff,3%)
+
+$headingsColor: $textColor
+$headingsFontWeight: bold
+
+$navbarBackgroundColor: #293133
+
+$navbarBackgroundTop: $navbarBackgroundColor
+$navbarBackgroundBottom: darken($navbarBackgroundTop,10%)
+
+$navbarHeight: 60px
+$navbarDropdownWidth: 272px
+
+$navbarText: #fff
+$navbarTextShadowColor: rgba(0,0,0,0.3)
+$navbarLinkColor: #ddd
+$navbarLinkColorHover: lighten($blueBrandColor, 40%)
+$navbarLinkColorActive: #fff
+//$navbarLinkBackgroundHover: rgba(lighten($navbarBackgroundColor,10%),.5)
+$navbarLinkBackgroundHover: transparent
+$navbarLinkBackgroundActive: rgba(0,0,0,0.25)
+
+$btnPrimaryBackground: $blue
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 10%)
+
+$footerBackground: hsl(240, 10%, 20%)
+$hrBorder: #dddddd
+
+
+// Container sizes
+$container-tablet:            ((1024px + $grid-gutter-width))
+$container-desktop:           ((1024px + $grid-gutter-width))
+$container-lg-desktop:        ((1024px + $grid-gutter-width))
+
+// Blocks sizes
+//$listItemHeight: (720px)/2
+$listItemHeight: (660px)/2
+$list-gutter-width: (32px)/2
+$listItemWidth: (448px)/2
+$listItemPadding: $list-gutter-width
+//$objectsListItemHeight: (640px)/2
+$objectsListItemHeight: (560px)/2

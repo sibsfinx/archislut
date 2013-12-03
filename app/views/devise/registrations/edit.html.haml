@@ -1,0 +1,30 @@
+= render 'devise/registrations/header'
+%div.tab-content
+  %div.tab-pane.active{:id => "general"}
+    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+      = f.error_notification
+      .row-fluid
+        .span3
+          = f.input :name, :label => (t 'user.profile.public_name'), :placeholder =>  (t 'activerecord.attributes.user.name'), :input_html => { class: 'input-block-level'}
+          = f.input :email, :required => false, :label => (t 'user.profile.contact_email'), :placeholder => (t 'activerecord.attributes.user.email'), :input_html => { class: 'input-block-level' }
+          - unless resource.unconfirmed_email.nil?
+            = f.input :unconfirmed_email, :required => false, :disabled => true
+            %p
+              = t 'devise.common.have_to_confirm_email'
+          .span.input-xlarge.uneditable-input
+            = resource.home_city.country
+          = f.input :timezone, :as => :time_zone
+          = f.input :currency , :as => :select, :collection => Money::Currency.table.map{|c| c[1][:iso_code]}
+          = f.input :locale_cd, :as => :select, :collection => User.locales, :collection_select => resource.locale_cd, :include_blank => false
+        .span1
+        .span3
+          = f.input :avatar, :as => :avatar_preview
+      -#= f.input :home_position, :as => :hidden
+      %hr.small
+      = f.button :submit, (t 'user.profile.update'), :class => 'btn btn-primary'
+-# :javascript
+  $(document).ready(function(){
+    gmapChangeUserLocation(#{current_user.to_json(:only =>[:home_position, :name])})
+  })
+-# #gmap
+

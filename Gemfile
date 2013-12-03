@@ -61,8 +61,8 @@ gem 'inherited_resources'
 #gem 'tabulous'
 # gem 'authbuttons-rails'
 
-#gem 'simple-navigation', :git => 'git://github.com/andi/simple-navigation.git'
-#gem 'simple-navigation-bootstrap'
+gem 'simple-navigation', :git => 'git://github.com/andi/simple-navigation.git'
+gem 'simple-navigation-bootstrap'
 
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 

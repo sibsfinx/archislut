@@ -1,0 +1,12 @@
+ru:
+  activemodel:
+    errors:
+      models:
+        owner_form:
+          attributes:
+            org_site_url:
+              url: Адрес сайта должен быть в формате url, например http://www.ru/
+        lead_form:
+          attributes:
+            email:
+              email: Неверный формат email
