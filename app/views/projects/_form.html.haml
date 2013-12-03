@@ -1,0 +1,6 @@
+= simple_form_for @project, multipart: true do |f|
+  = f.input :image, as: :file
+  = f.input :author
+  = f.input :description
+
+  = f.submit 'Save'

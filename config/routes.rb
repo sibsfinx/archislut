@@ -1,6 +1,12 @@
 Archislut::Application.routes.draw do
   devise_for :users
   root 'welcome#index'
+  resources :projects do
+    member do
+      get :like
+      get :dislike
+    end
+  end
 
 
   # Example of regular route:

@@ -76,6 +76,7 @@ gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'jquery-rails'
 
 gem 'acts_as_votable', '~> 0.8.0'
+gem 'carrierwave'
 #gem 'jquery-turbolinks'
 
 #gem 'nilify_blanks', :git => 'git://github.com/rubiety/nilify_blanks.git'
