@@ -3,6 +3,8 @@ class Project < ActiveRecord::Base
   belongs_to :user
   mount_uploader :image, ImageUploader
 
+  validate :image, :author, :description, presence: true
+
   scope :random, ->(user=nil) do
     if user.blank?
       return order("random()").limit(1)
