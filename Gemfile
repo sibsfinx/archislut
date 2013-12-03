@@ -38,7 +38,7 @@ gem 'authority'
 # gem 'switch_user'
 
 # Почта
-#gem 'recipient_interceptor'
+gem 'recipient_interceptor'
 
 #gem 'mini_magick'
 #gem 'carrierwave'

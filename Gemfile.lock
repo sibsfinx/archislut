@@ -289,6 +289,8 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    recipient_interceptor (0.1.1)
+      mail
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
     rspec-console (0.2.4)
@@ -404,6 +406,7 @@ DEPENDENCIES
   rails-erd
   rb-fsevent (~> 0.9.1)
   rb-inotify (~> 0.9)
+  recipient_interceptor
   rspec-console
   rspec-rails (>= 2.11.0)
   ruby-graphviz
