@@ -14,15 +14,17 @@ gem 'pg_array_parser'
 
 gem 'settingslogic'
 
+gem 'devise'
+
 # Авторизация и аутентификация
 gem 'authority'
 # gem 'rolify'
 
 # Модели, value object и form objects
 # gem 'phony_rails', :git => 'git://github.com/joost/phony_rails.git'
-gem 'active_attr'
-gem 'validates'
-gem 'hashie'
+#gem 'active_attr'
+#gem 'validates'
+#gem 'hashie'
 # берется последняя версия для совместимости с rails 4
 # gem 'state_machine', :git => 'git://github.com/pluginaweek/state_machine.git'
 # gem 'simple_enum'
@@ -36,7 +38,7 @@ gem 'hashie'
 # gem 'switch_user'
 
 # Почта
-gem 'recipient_interceptor'
+#gem 'recipient_interceptor'
 
 #gem 'mini_magick'
 #gem 'carrierwave'
@@ -51,7 +53,7 @@ gem 'inherited_resources'
 
 
 # Вьюхи и презентеры
-gem 'active_link_to'
+#gem 'active_link_to'
 
 #gem 'draper'
 #gem 'cells'
@@ -59,25 +61,27 @@ gem 'active_link_to'
 #gem 'tabulous'
 # gem 'authbuttons-rails'
 
-gem 'simple-navigation', :git => 'git://github.com/andi/simple-navigation.git'
-gem 'simple-navigation-bootstrap'
+#gem 'simple-navigation', :git => 'git://github.com/andi/simple-navigation.git'
+#gem 'simple-navigation-bootstrap'
 
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 
 #gem 'nested_form'
 #gem 'cocoon'
 
-gem 'kaminari'
-gem 'kaminari-bootstrap'
+#gem 'kaminari'
+#gem 'kaminari-bootstrap'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
+
+gem 'acts_as_votable', '~> 0.8.0'
+#gem 'jquery-turbolinks'
 
 #gem 'nilify_blanks', :git => 'git://github.com/rubiety/nilify_blanks.git'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#gem 'turbolinks'
 gem 'haml-rails'
 
 # Очередь
@@ -92,7 +96,7 @@ gem 'haml-rails'
 gem 'jbuilder', '~> 1.0.1'
 
 #gem 'airbrake_user_attributes'
-gem 'airbrake', :github => 'airbrake/airbrake'
+#gem 'airbrake', :github => 'airbrake/airbrake'
 
 gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git' # '~> 2.3.2.0'
 gem 'compass-rails', '~> 2.0.alpha.0'
@@ -201,46 +205,46 @@ group :development do
   gem 'foreman'
 end
 
-group :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-prof'
-  gem 'rb-inotify', '~> 0.9', :require => false
-  # Start Pry in the context of a failed test
-  #gem 'plymouth'
-  gem "rspec-rails", ">= 2.11.0"
-  gem "fakeredis", :require => "fakeredis/rspec"
-  gem 'resque_spec'
-  gem "email_spec", ">= 1.2.1"
-  gem "cucumber-rails", ">= 1.3.0", :require => false
-  gem 'guard'
-  #gem 'debugger' unless `whoami`=~/jenkins/
-  gem 'guard-spork'
-  gem 'guard-rspec'
-  gem 'guard-rails'
-  gem 'guard-bundler'
-  gem 'guard-cucumber'
-  gem 'guard-ctags-bundler'
-  
-  gem 'simplecov', :require => false
-  gem 'simplecov-rcov', :require => false
-  
-  gem "database_cleaner"
-  gem "capybara"
-  gem 'capybara-screenshot'
-  gem 'poltergeist'
-  
-  gem "launchy", ">= 2.1.2"
-  gem 'turn', :require => false
-  #gem "test_active_admin", :git => "git://github.com/BrandyMint/test_active_admin.git"
-end
-
-group :deploy do
-  gem 'capistrano', '~> 3.0', :require => false
-  gem 'capistrano-rbenv', github: 'capistrano/rbenv', :require => false
-  gem 'capistrano-rails', github: 'capistrano/rails', :require => false
-  gem 'capistrano-bundler', github: 'capistrano/bundler', :require => false
-end
-
-group :production do
-  gem 'unicorn'
-end
+#group :test do
+#  gem 'factory_girl_rails'
+#  gem 'rspec-prof'
+#  gem 'rb-inotify', '~> 0.9', :require => false
+#  # Start Pry in the context of a failed test
+#  #gem 'plymouth'
+#  gem "rspec-rails", ">= 2.11.0"
+#  gem "fakeredis", :require => "fakeredis/rspec"
+#  gem 'resque_spec'
+#  gem "email_spec", ">= 1.2.1"
+#  gem "cucumber-rails", ">= 1.3.0", :require => false
+#  gem 'guard'
+#  #gem 'debugger' unless `whoami`=~/jenkins/
+#  gem 'guard-spork'
+#  gem 'guard-rspec'
+#  gem 'guard-rails'
+#  gem 'guard-bundler'
+#  gem 'guard-cucumber'
+#  gem 'guard-ctags-bundler'
+#  
+#  gem 'simplecov', :require => false
+#  gem 'simplecov-rcov', :require => false
+#  
+#  gem "database_cleaner"
+#  gem "capybara"
+#  gem 'capybara-screenshot'
+#  gem 'poltergeist'
+#  
+#  gem "launchy", ">= 2.1.2"
+#  gem 'turn', :require => false
+#  #gem "test_active_admin", :git => "git://github.com/BrandyMint/test_active_admin.git"
+#end
+#
+##group :deploy do
+##  gem 'capistrano', '~> 3.0', :require => false
+##  gem 'capistrano-rbenv', github: 'capistrano/rbenv', :require => false
+##  gem 'capistrano-rails', github: 'capistrano/rails', :require => false
+##  gem 'capistrano-bundler', github: 'capistrano/bundler', :require => false
+##end
+##
+##group :production do
+##  gem 'unicorn'
+##end
