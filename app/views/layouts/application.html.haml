@@ -9,9 +9,6 @@
   %body{:class => "#{controller_name} #{action_name}"}
     #main{:role => "main"}
       = render 'layouts/navigation'
-      .container
-        .content
-          .row
-            .col-md-12
-              = yield
-          %footer
+      .application-container
+        = yield
+      %footer

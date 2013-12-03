@@ -9,7 +9,6 @@ SimpleNavigation::Configuration.run do |navigation|
 
     if current_user
       primary.item :logout, 'logout', destroy_user_session_path
-      primary.item :add_project, 'Add project', new_project_path
     else
       primary.item :signup, 'sign up', new_user_registration_path
       primary.item :login, 'login', new_user_session_path

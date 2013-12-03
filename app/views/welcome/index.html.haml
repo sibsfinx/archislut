@@ -1,8 +1,40 @@
-- if @project.present?
-  = image_tag @project.image.url, width:"300"
-  %h1= @project.author
-  %p= @project.description
+.welcome-page.container
+  .row
+    - if @project.present?
+      .col-sm-6
+        .welcome-project-block.project-block
+          .project-block-image
+            = link_to "#{@project.image}", target: :blank do
+              = image_tag @project.image
 
-  = link_to "Like(#{@project.likes.size})", like_project_path(@project)
-  = link_to "Dislike(#{@project.dislikes.size})", dislike_project_path(@project)
+      .col-sm-6
+        %h1= @project.author
+        %p= @project.description if @project.description.present?
+        %hr
+        .project-block-buttons
+          .row
+            .col-xs-6
+              = link_to like_project_path(@project), class: 'btn btn-lg btn-default btn-block btn-success' do
+                Архитектор!
+            .col-xs-6
+              = link_to dislike_project_path(@project), class: 'btn btn-lg btn-default btn-block btn-danger' do
+                Шлюха!
+            -#= link_to "Like(#{@project.likes.size})", like_project_path(@project), class: 'btn btn-lg btn-default'
+            -#= link_to "Dislike(#{@project.dislikes.size})", dislike_project_path(@project), class: 'btn btn-lg btn-default'
+        %hr
+        .welcome-project-reload
+          = link_to root_path, class: 'btn btn-default' do
+            = fontello 'spin3', size: 16, v_align: :middle
+            Ещё!
+
+    - else
+      .col-sm-6.col-sm-offset-3
+        %h1
+          Нет новых проектов
+          %br
+          для голосования
+        %br
+        = link_to new_project_path, class: 'btn btn-lg btn-block btn-primary' do
+          Добавить проект
+          -#= fontello 'right-open-big', size: 14, v_align: :middle
 

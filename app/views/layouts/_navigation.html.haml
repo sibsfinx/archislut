@@ -1,12 +1,16 @@
-.navbar.navbar-inverse.navbar-fixed-top
-  .container
-    .navbar-header
-      = link_to 'Архитектор или шлюха', root_url, class: 'navbar-brand'
+.navbar.navbar-default.navbar-fixed-top
+  .navbar-header
+    = link_to 'Архитектор или шлюха', root_url, class: 'navbar-brand'
+    %ul.nav.navbar-nav
+      %li
+        = link_to new_project_path, class: 'navbar-add-project-btn' do
+          = fontello 'plus-1'
+          Добавить проект
 
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      -#= link_to Settings.app.title, root_url, :class => 'navbar-brand'
-    .collapse.navbar-collapse
-      = render_navigation :expand_all => true, :renderer => :bootstrap
+    %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    -#= link_to Settings.app.title, root_url, :class => 'navbar-brand'
+  .collapse.navbar-collapse
+    = render_navigation :expand_all => true, :renderer => :bootstrap

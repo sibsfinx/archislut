@@ -1,8 +1,10 @@
-= link_to 'Back', root_path
-
 .new-project-page
   .row
     .col-sm-4.col-sm-offset-4
-      %h1 Новый проект
+      %h1.no-margins.new-project-title
+        Новый проект
+  %hr
+  .row
+    .col-sm-4.col-sm-offset-4
       = render 'form'
 

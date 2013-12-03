@@ -1,16 +1,19 @@
 .project-page
   .row
     .col-sm-8.col-sm-offset-2
-      %p#notice
-        = notice
       .pull-left
         = link_to 'Изменить проект', edit_project_path(@project), class: 'btn btn-default'
       .pull-right
         = link_to 'Готово', root_url, class: 'btn btn-primary'
       .clearfix
+  %hr
+  .row
+    .col-sm-8.col-sm-offset-2
+      %h1= @project.author
+      %p= @project.description if @project.description.present?
       %hr
-
       = link_to "#{@project.image}", target: :blank do
         = image_tag @project.image
+
       %hr
 
