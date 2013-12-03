@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/andi/simple-navigation.git
+  revision: 9e1657e18789e05c573b99be1c64dc1a476e4d12
+  specs:
+    simple-navigation (3.11.0)
+      activesupport (>= 2.3.2)
+
+GIT
   remote: git://github.com/plataformatec/simple_form.git
   revision: 73005f4fc8b0b4934b2fbe9dd54ea35a1692c84a
   specs:
@@ -308,6 +315,9 @@ GEM
     semver2 (3.3.2)
     settingslogic (2.0.9)
     sexp_processor (4.2.1)
+    simple-navigation-bootstrap (1.0.0)
+      railties (>= 3.1)
+      simple-navigation (>= 3.7.0)
     sinatra (1.4.3)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -403,6 +413,8 @@ DEPENDENCIES
   sdoc
   semver2
   settingslogic
+  simple-navigation!
+  simple-navigation-bootstrap
   simple_form!
   sprockets-rails!
   uglifier (~> 1.3)

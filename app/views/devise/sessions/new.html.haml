@@ -1,0 +1,13 @@
+.login-block
+  .row
+    .col-sm-4.col-sm-offset-4
+      = simple_form_for resource, :as => resource_name, :url => session_path(resource_name) do |f|
+        = f.input :email, label: false
+        = f.input :password, label: false
+        = f.submit 'Войти', class: 'btn btn-lg btn-primary btn-block'
+    
+      -# if devise_mapping.rememberable?
+        = f.check_box :remember_me
+        = f.label :remember_me
+      %hr
+      = render "devise/shared/links"
