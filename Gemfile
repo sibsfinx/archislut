@@ -39,7 +39,6 @@ gem 'authority'
 
 # Почта
 gem 'recipient_interceptor'
-
 #gem 'mini_magick'
 #gem 'carrierwave'
 
