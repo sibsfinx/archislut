@@ -7,8 +7,9 @@ class ProjectsController < ApplicationController
   #end
 
   # GET /projects/1
-  #def show
-  #end
+  def show
+
+  end
 
   # GET /projects/new
   def new

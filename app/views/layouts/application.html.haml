@@ -10,8 +10,7 @@
     #main{:role => "main"}
       = render 'layouts/navigation'
       .container
-        .content
-          .row
-            .col-md-12
-              = yield
-          %footer
+        = render 'layouts/messages'
+      .application-container
+        = yield
+      %footer

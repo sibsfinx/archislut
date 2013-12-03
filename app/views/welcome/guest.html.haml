@@ -1,0 +1,11 @@
+.welcome-guest-page
+  = image_tag image_path('splash.png'), width: 800, height: 400, class: 'welcome-guest-image'
+  .welcome-guest-buttons
+    = link_to new_user_session_path, class: 'btn btn-default btn-lg btn-primary' do
+      Войти
+    %span.text-muted
+      &nbsp;
+      или
+      &nbsp;
+    = link_to new_user_registration_path,  class: 'btn btn-default btn-lg' do
+      Присоединиться

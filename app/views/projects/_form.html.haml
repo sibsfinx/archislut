@@ -1,6 +1,8 @@
 = simple_form_for @project, multipart: true do |f|
-  = f.input :image, as: :file
-  = f.input :author
-  = f.input :description
+  %h5 Выберите обложку
+  = f.input :image, as: :file, label: false
+  %hr
+  = f.input :author, label: false
+  = f.input :description, label: false
 
-  = f.submit 'Save'
+  = f.submit 'Опубликовать', class: 'btn btn-lg btn-block btn-primary'
