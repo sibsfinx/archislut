@@ -8,10 +8,10 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.dom_class = 'nav navbar-nav pull-right'
 
     if current_user
-      primary.item :logout, 'logout', destroy_user_session_path
+      primary.item :logout, 'Выйти', destroy_user_session_path
     else
-      primary.item :signup, 'sign up', new_user_registration_path
-      primary.item :login, 'login', new_user_session_path
+      primary.item :signup, 'Присоединиться', new_user_registration_path
+      primary.item :login, 'Войти', new_user_session_path
     end
 
     # you can turn off auto highlighting for a specific level
