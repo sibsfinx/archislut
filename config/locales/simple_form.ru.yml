@@ -32,11 +32,15 @@ ru:
         saving: Сохраняем...
         waiting: Подождите...
     labels:
-      defaults:
+      defaults: &default_labels
         name: Название
         title: Название
         slug: Поддомен
         site_url: Сайт
+        cover: Обложка
+        author: Автор проекта
+        description: Описание
+        url: Ссылка на проект
       user: &user_labels
         username: Имя пользователя
         email: Email
@@ -98,6 +102,7 @@ ru:
         add: Добавить
     placeholders:
       defaults:
+        <<: *default_labels
         available_domains: 'domain1.com, domain2.ru'
         value: Значение
         title: Название
