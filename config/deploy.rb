@@ -1,9 +1,7 @@
-set :application, 'example.com'
-set :repo_url, 'git@github.com:Example/example.git'
+set :application, 'archislut.icfdev.ru'
+set :repo_url, 'git@github.com:sibsfinx/archislut.git'
 
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-
-set :deploy_to, "/home/www/#{fetch(:application)}"
+set :deploy_to, ->{"/home/wwwarchislut/#{fetch(:application)}"}
 set :scm, :git
 
 # set :format, :pretty
@@ -11,12 +9,12 @@ set :scm, :git
 # set :pty, true
 
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.0.0-p247'
+set :rbenv_ruby, '2.0.0-p353'
 
 set :bundle_without, %w{development test deploy}.join(' ')
 
